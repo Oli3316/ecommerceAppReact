@@ -1,0 +1,52 @@
+.navbar {
+  float: left;
+  width: 100%;
+  border-bottom: rgb(255, 255, 255);
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.container-logo {
+  width: 200px;
+  font-size: 80px;
+  color: black;
+  font-family: Montserrat;
+}
+.container-logo img {
+  width: 100%;
+}
+.header-primary {
+  background: none !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid #ccc;
+}
+.header-primary .navbar li {
+  margin-right: 10px;
+}
+.header-primary .navbar .navbar__btn {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: black;
+}
+.header-primary .navbar .navbar__btn:hover {
+  font-weight: 600;
+}
+
+.header-primary .navbar .navbar__btn:hover:before {
+  width: 85%;
+}
+
+.header-primary .navbar .navbar__btn:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  transition: width 0.3s ease;
+  height: 1px;
+  background: black;
+  bottom: 5px;
+}
+
+.iconos {
+  color: black;
+}
