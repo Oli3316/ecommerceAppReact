@@ -3,18 +3,17 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
 import React, { useState } from 'react';
+// import ItemCount from '../components/ItemCount/ItemCount';
 
 const CardItem = ({ image, title, price }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const addCount = () => {
     setCount(count + 1);
-    if (count === 1) {
-    }
   };
   const restCount = () => {
     setCount(count - 1);
-    if (count <= 0) {
-      setCount(0);
+    if (count <= 1) {
+      setCount(1);
     }
   };
   return (
@@ -25,7 +24,7 @@ const CardItem = ({ image, title, price }) => {
             <img src={`./${image}`} />
           </div>
           <p>{title}</p>
-          <span onClick="botonSumar">$ {price + price * count}</span>
+          <span onClick="botonSumar">$ { price * count}</span>
           <div className="card-contador">
             <Button onClick={restCount}>-</Button>
             <p>{count}</p>
