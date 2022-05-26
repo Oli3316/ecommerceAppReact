@@ -2,20 +2,9 @@ import './Card.css';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
-import React, { useState } from 'react';
-// import ItemCount from '../components/ItemCount/ItemCount';
+import ItemCount from '../ItemCount/ItemCount';
 
 const CardItem = ({ image, title, price }) => {
-  const [count, setCount] = useState(1);
-  const addCount = () => {
-    setCount(count + 1);
-  };
-  const restCount = () => {
-    setCount(count - 1);
-    if (count <= 1) {
-      setCount(1);
-    }
-  };
   return (
     <Card sx={{ minWidth: 225 }}>
       <CardContent>
@@ -24,14 +13,7 @@ const CardItem = ({ image, title, price }) => {
             <img src={`./${image}`} />
           </div>
           <p>{title}</p>
-          <span onClick="botonSumar">$ { price * count}</span>
-          <div className="card-contador">
-            <Button onClick={restCount}>-</Button>
-            <p>{count}</p>
-            <Button className="botonSumar" onClick={addCount}>
-              +
-            </Button>
-          </div>
+          <ItemCount />
           <Button variant={'contained'}>Detalle</Button>
         </div>
       </CardContent>
