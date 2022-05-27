@@ -1,15 +1,18 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import CardList from './components/CardList/CardList';
+import Home from './Pages/Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     //JSX
     <div className="App">
       <NavBar />
-      <div className="general-container">
-        <CardList title={'Productos Recomendados'} />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/home" element={<Home />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

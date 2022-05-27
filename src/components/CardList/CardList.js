@@ -1,55 +1,65 @@
 import CardItem from '../Cards/Cards';
 import { Grid } from '@mui/material';
+import { useState, useEffect } from 'react';
 
 const CardList = ({ title }) => {
+  const [products, setProducts] = useState([]);
   const productos = [
     {
+      id: 1,
       title: 'Queso',
-      price: 1500,
-      image: 'DonattoQueso.jpg'
+      price: 200,
+      image: 'Original.jpg'
     },
     {
+      id: 2,
       title: 'Chia',
-      price: 1500,
+      price: 200,
       image: 'chia.jpg'
     },
     {
+      id: 3,
       title: 'Jamon',
-      price: 1500,
+      price: 200,
       image: 'jamon.jpg'
+    },
+    {
+      id: 4,
+      title: 'Original',
+      price: 200,
+      image: 'Original.jpg'
     }
   ];
+
+  const getProducts = () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(productos);
+      }, 2000);
+    });
+  };
+  useEffect(() => {
+    getProducts()
+      .then((response) => {
+        setProducts(response);
+      })
+      .catch((err) => {
+        console.log('Fallo la operacion', err);
+      });
+  }, []);
   return (
     <>
       <h2>{title}</h2>
-      <Grid container>
-        <Grid item md={3}>
-          <CardItem title={'Lino'} price={200} image={'Lino.jpg'} />
-        </Grid>
-        <Grid item md={3}>
-          <CardItem title={'Original'} price={200} image={'Original.jpg'} />
-        </Grid>
-        <Grid item md={3}>
-          <CardItem title={'Original (Sin Sal)'} price={200} image={'Original.jpg'} />
-        </Grid>
-        <Grid item md={3}>
-          <CardItem title={'Remolacha'} price={200} image={'Lino.jpg'} />
-        </Grid>
-        <Grid item md={3}>
-          <CardItem title={'Jamon'} price={200} image={'jamon.jpg'} />
-        </Grid>
-        <Grid item md={3}>
-          <CardItem title={'Queso'} price={200} image={'jamon.jpg'} />
-        </Grid>
-        <Grid item md={3}>
-          <CardItem title={'Mix De Semillas'} price={200} image={'Original.jpg'} />
-        </Grid>
-        <Grid item md={3}>
-          <CardItem title={'Espinaca'} price={200} image={'Lino.jpg'} />
-        </Grid>
+      <Grid container spacing={4}>
+        {products.map((prod) => {
+          return (
+            <Grid item md={3} key={prod.id}>
+              <CardItem title={prod.title} price={prod.price} image={prod.image} />
+            </Grid>
+          );
+        })}
       </Grid>
     </>
   );
 };
-
 export default CardList;
