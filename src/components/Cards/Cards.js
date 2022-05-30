@@ -6,9 +6,9 @@ import ItemCount from '../ItemCount/ItemCount';
 import { useState } from 'react';
 import Modal from '../Modal/Modal';
 
-const CardItem = ({ image, title, price }) => {
+const CardItem = (prod) => {
   const [open, setOpen] = useState(false);
-
+  const { image, stock, price, title } = prod;
   const handleClose = () => {
     setOpen(false);
   };
@@ -17,10 +17,10 @@ const CardItem = ({ image, title, price }) => {
       <CardContent>
         <div className="card-item">
           <div>
-            <img src={`./${image}`} />
+            <img src={`${image}`} />
           </div>
           <p>{title}</p>
-          <ItemCount />
+          <ItemCount stock={stock} price={price} />
           <Button variant={'contained'}>Detalle</Button>
         </div>
       </CardContent>

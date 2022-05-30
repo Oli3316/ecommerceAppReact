@@ -1,10 +1,13 @@
 import { Button } from '@mui/material';
 import React, { useState } from 'react';
 
-const ItemCount = () => {
+const ItemCount = (prod) => {
+  const { stock, price } = prod;
   const [count, setCount] = useState(1);
   const addCount = () => {
-    setCount(count + 1);
+    if (count < stock) {
+      setCount(count + 1);
+    }
   };
   const restCount = () => {
     if (count > 0) {
@@ -13,7 +16,7 @@ const ItemCount = () => {
   };
   return (
     <>
-      <span onClick="botonSumar">$ {200 * count}</span>
+      <span onClick="botonSumar">$ {price * count}</span>
       <div className="card-contador">
         <Button onClick={restCount} disabled={count === 0}>
           -
