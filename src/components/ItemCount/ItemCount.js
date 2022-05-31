@@ -10,15 +10,15 @@ const ItemCount = (prod) => {
     }
   };
   const restCount = () => {
-    if (count > 0) {
+    if (count > 1) {
       setCount(count - 1);
     }
   };
   return (
     <>
-      <span onClick="botonSumar">$ {price * count}</span>
+      <span onClick={addCount}>$ {price * count}</span>
       <div className="card-contador">
-        <Button onClick={restCount} disabled={count === 0}>
+        <Button onClick={restCount} disabled={count === 1}>
           -
         </Button>
         <p>{count}</p>

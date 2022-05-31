@@ -7,11 +7,7 @@ import { useState } from 'react';
 import Modal from '../Modal/Modal';
 
 const CardItem = (prod) => {
-  const [open, setOpen] = useState(false);
   const { image, stock, price, title } = prod;
-  const handleClose = () => {
-    setOpen(false);
-  };
   return (
     <Card sx={{ minWidth: 225 }}>
       <CardContent>

@@ -1,8 +1,9 @@
 import './NavBar.css';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Button from '@mui/material/Button';
+import CartWidget from '../CartWidget/CartWidget';
+
 const NavBar = () => {
   return (
     <AppBar position="static" className="header-primary">
@@ -10,7 +11,13 @@ const NavBar = () => {
         <div className="container-logo">Donatto</div>
         <ul className="navbar">
           <li>
-            <Button disableRipple style={{ backgroundColor: 'transparent' }} variant="text" className="navbar__btn">
+            <Button
+              disableRipple
+              style={{ backgroundColor: 'transparent' }}
+              variant="text"
+              className="navbar__btn"
+              href="/"
+            >
               Inicio
             </Button>
           </li>
@@ -29,9 +36,7 @@ const NavBar = () => {
               Contacto
             </Button>
           </li>
-          <Button disableRipple style={{ backgroundColor: 'transparent' }} variant="text" className="navbar__btn">
-            <ShoppingCartIcon className="iconos" />
-          </Button>
+          <CartWidget />
         </ul>
       </Toolbar>
     </AppBar>

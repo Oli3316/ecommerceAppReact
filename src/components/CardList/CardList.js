@@ -58,7 +58,7 @@ const CardList = ({ title }) => {
         {products.map((prod) => {
           return (
             <Grid item md={3} key={prod.id}>
-              <CardItem title={prod.title} price={prod.price} image={prod.image} />
+              <CardItem {...prod} />
             </Grid>
           );
         })}

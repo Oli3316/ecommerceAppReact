@@ -10,7 +10,7 @@ function App() {
       <NavBar />
       <BrowserRouter>
         <Routes>
-          <Route exact path="/home" element={<Home />}></Route>
+          <Route exact path="/" element={<Home />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
