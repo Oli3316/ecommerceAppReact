@@ -2,6 +2,13 @@ import CardItem from '../Cards/Cards';
 import { Grid } from '@mui/material';
 import { useState, useEffect } from 'react';
 
+const producto = {
+  id: 4,
+  title: 'Original',
+  price: 200,
+  image: 'Original.jpg',
+  stock: 15
+};
 const CardList = ({ title }) => {
   const [products, setProducts] = useState([]);
   const productos = [
@@ -67,3 +74,4 @@ const CardList = ({ title }) => {
   );
 };
 export default CardList;
+export { producto };

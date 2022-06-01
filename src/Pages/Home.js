@@ -2,7 +2,7 @@ import CardList from '../components/CardList/CardList';
 const Home = () => {
   return (
     <div className="general-container">
-      <CardList title={'Productos Recomendados'} />
+      <CardList title={'Nuestros Productos'} />
     </div>
   );
 };
