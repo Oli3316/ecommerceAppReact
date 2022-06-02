@@ -9,11 +9,12 @@ const ItemDetail = ({ data }) => {
       <CardContent>
         <div className="card-item">
           <div>
-            <img src={data.image} />
+            <img src={`/${data.image}`} />
           </div>
           <p>{data.title}</p>
           <p>${data.price}</p>
         </div>
+        <ItemCount stock={data.stock} price={data.price} />
       </CardContent>
     </Card>
   );

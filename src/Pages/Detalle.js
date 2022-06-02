@@ -1,5 +1,10 @@
+import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer';
 const Detalle = () => {
-  return;
+  return (
+    <>
+      <ItemDetailContainer />
+    </>
+  );
 };
 
 export default Detalle;

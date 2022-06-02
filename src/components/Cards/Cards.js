@@ -13,11 +13,13 @@ const CardItem = (prod) => {
       <CardContent>
         <div className="card-item">
           <div>
-            <img src={image} />
+            <img src={`/${image}`} />
           </div>
           <p>{title}</p>
           <ItemCount stock={stock} price={price} />
-          <Button variant={'contained'}>Detalle</Button>
+          <Button variant={'contained'} href="/product/:id">
+            Detalle
+          </Button>
         </div>
       </CardContent>
       <Modal />
