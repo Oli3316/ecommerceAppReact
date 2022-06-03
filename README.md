@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+<!-- _# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +67,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)_ -->
+
+# Nombre del proyecto
+
+Utilice el nombre 'Donatto' debido a que es la marca de una empresa real.
+
+# Utilizacion de la app
+
+Para utilizar la app es tan sencillo como escoger el producto a comprar, el mismo va a estar en un catalogo, y seleccionar la cantidad. Luego se agrega al carrito, se hace un chequeo de los productos y se finaliza la compra.
+
+### Instalacion de MUI
+
+En este proyecto utilice la libreria MUI para el desarrollo de los componentes, especialmente las Cards y el NavBar.
+
+# Plan de Proyecto
+
+Pense en un eecomerce donde pueda mostrarle al cliente mis productos de manera sencilla y practica, es decir, que el cliente entienda facilmente el funcionamiento de la app.
+Para esto hice un carrito de compras donde el "agregado" de productos se entienda facilmente y se pueda añadir la cantidad preferida.
+
+# Gif de la App
+
+Adjunto link del gif
+https://drive.google.com/file/d/19D3wggQlYuZRa1m8wY7HJOy8wcizZGtM/view?usp=sharing
