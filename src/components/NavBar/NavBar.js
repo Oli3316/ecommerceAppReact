@@ -22,7 +22,13 @@ const NavBar = () => {
             </Button>
           </li>
           <li>
-            <Button disableRipple style={{ backgroundColor: 'transparent' }} variant="text" className="navbar__btn">
+            <Button
+              disableRipple
+              style={{ backgroundColor: 'transparent' }}
+              variant="text"
+              className="navbar__btn"
+              href="/nosotros"
+            >
               Nosotros
             </Button>
           </li>

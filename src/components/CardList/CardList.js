@@ -17,7 +17,8 @@ const CardList = ({ title }) => {
       title: 'Queso',
       price: 200,
       image: 'Original.jpg',
-      stock: 40
+      stock: 40,
+      category: 'con sal'
     },
     {
       id: 2,

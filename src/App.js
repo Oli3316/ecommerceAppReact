@@ -7,6 +7,7 @@ import NotFound from './Pages/NotFound';
 import Contacto from './Pages/Contacto';
 import ProductList from './Pages/ProductList';
 // import { ThemeProvider } from './context/ThemeContext';
+import Nosotros from './Pages/Nosotros';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/contact" element={<Contacto />} />
+          <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<Detalle />} />
           <Route path="/products/:category" element={<ProductList />} />
