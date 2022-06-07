@@ -120,7 +120,7 @@ const CardList = ({ title }) => {
     <>
       <h2>{title}</h2>
       <Grid container spacing={4}>
-        {products.map((prod) => {
+        {productos.map((prod) => {
           return (
             <Grid item md={3} key={prod.id}>
               <CardItem {...prod} />

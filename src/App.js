@@ -5,7 +5,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Detalle from './Pages/Detalle';
 import NotFound from './Pages/NotFound';
 import Contacto from './Pages/Contacto';
-import ProductList from './Pages/ProductList';
+// import ProductList from './Pages/ProductList';
+import CardList from './components/CardList/CardList';
 // import { ThemeProvider } from './context/ThemeContext';
 import Nosotros from './Pages/Nosotros';
 import ProductListWithSalt from './Pages/ProductListWithSalt';
@@ -22,7 +23,7 @@ function App() {
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<Detalle />} />
-          <Route path="/products/:category" element={<ProductList />} />
+          <Route path="/products/:category" element={<CardList />} />
           <Route path="/productos/:consal" element={<ProductListWithSalt />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
