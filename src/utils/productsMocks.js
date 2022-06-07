@@ -30,5 +30,14 @@ const productos = [
     category: 'Sin sal'
   }
 ];
+const producto = {
+  id: 4,
+  title: 'Original',
+  price: 200,
+  image: 'Original.jpg',
+  stock: 15,
+  category: 'Sin sal'
+};
 
 export default productos;
+export { producto };
