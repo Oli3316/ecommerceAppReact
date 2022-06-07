@@ -8,6 +8,7 @@ import Contacto from './Pages/Contacto';
 import ProductList from './Pages/ProductList';
 // import { ThemeProvider } from './context/ThemeContext';
 import Nosotros from './Pages/Nosotros';
+import ProductListWithSalt from './Pages/ProductListWithSalt';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<Detalle />} />
           <Route path="/products/:category" element={<ProductList />} />
+          <Route path="/productos/:consal" element={<ProductListWithSalt />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

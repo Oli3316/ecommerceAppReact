@@ -1,5 +1,5 @@
 import ItemDetail from '../ItemDetail/ItemDetail';
-import { producto } from '../CardList/CardList';
+// import { producto } from '../CardList/CardList';
 import React, { useEffect, useState } from 'react';
 import { Grid } from '@mui/material';
 import { useParams } from 'react-router-dom';
@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
   const getItem = () => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(producto);
+        resolve(product);
       }, 2000);
     });
   };

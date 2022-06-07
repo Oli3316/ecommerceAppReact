@@ -27,7 +27,7 @@ const ProductList = () => {
 
   return (
     <div className="general-container">
-      <CardList title={'Productos Sin Sal'} productos={products.category} />
+      <CardList title={'Nuestros Productos'} productos={products} />
     </div>
   );
 };
