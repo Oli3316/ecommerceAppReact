@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import React, { useState } from 'react';
 
-const ItemCount = (prod) => {
+const ItemCount = (prod, setShowButton) => {
   const { stock, price } = prod;
   const [count, setCount] = useState(1);
   const addCount = () => {
@@ -26,6 +26,9 @@ const ItemCount = (prod) => {
           +
         </Button>
       </div>
+      <Button variant="outlined" onClick={() => setShowButton(true)}>
+        Agregar producto
+      </Button>
     </>
   );
 };

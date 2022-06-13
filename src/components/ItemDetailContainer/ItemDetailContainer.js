@@ -1,8 +1,8 @@
 import ItemDetail from '../ItemDetail/ItemDetail';
-import { producto } from '../../utils/productsMocks';
 import React, { useEffect, useState } from 'react';
 import { Grid } from '@mui/material';
 import { useParams } from 'react-router-dom';
+import productos from '../../utils/productsMocks';
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
   const getItem = () => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(producto);
+        resolve(productos.find(prod => prod.id == id));
       }, 2000);
     });
   };

@@ -4,10 +4,10 @@ import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
 import ItemCount from '../ItemCount/ItemCount';
 import { useState } from 'react';
-import Modal from '../Modal/Modal';
+import { Link } from 'react-router-dom';
 
 const CardItem = (prod) => {
-  const { image, stock, price, title } = prod;
+  const { image, stock, price, title, id } = prod;
   return (
     <Card sx={{ minWidth: 225 }}>
       <CardContent>
@@ -17,12 +17,11 @@ const CardItem = (prod) => {
           </div>
           <p>{title}</p>
           <ItemCount stock={stock} price={price} />
-          <Button variant={'contained'} href="/product/:id">
+          <Link variant={'contained'} to={'/product/' + id}>
             Detalle
-          </Button>
+          </Link>
         </div>
       </CardContent>
-      <Modal />
     </Card>
   );
 };

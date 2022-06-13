@@ -24,7 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<Detalle />} />
           <Route path="/products/:category" element={<CardList />} />
-          <Route path="/productos/:consal" element={<ProductListWithSalt />} />
+          {/* <Route path="/productos/:consal" element={<ProductListWithSalt />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

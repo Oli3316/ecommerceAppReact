@@ -12,42 +12,37 @@ const NavBar = () => {
         <div className="container-logo">Donatto</div>
         <ul className="navbar">
           <li>
-            <Button
-              disableRipple
-              style={{ backgroundColor: 'transparent' }}
-              variant="text"
-              className="navbar__btn"
-              href="/"
-            >
-              Inicio
-            </Button>
-          </li>
-          <li>
-            <Button
-              disableRipple
-              style={{ backgroundColor: 'transparent' }}
-              variant="text"
-              className="navbar__btn"
-              href="/nosotros"
-            >
-              Nosotros
-            </Button>
-          </li>
-          <li>
-            <Button
-              disableRipple
-              style={{ backgroundColor: 'transparent' }}
-              variant="text"
-              className="navbar__btn"
-              href="/products/:category"
-            >
-              Productos
+            <Button disableRipple style={{ backgroundColor: 'transparent' }} variant="text" className="navbar__btn">
+              <Link className="navbar__btn" style={{ textDecoration: 'none' }} to={'/'}>
+                Inicio
+              </Link>
             </Button>
           </li>
           <li>
             <Button disableRipple style={{ backgroundColor: 'transparent' }} variant="text" className="navbar__btn">
-              <Link className="navbar__btn" style={{ textDecoration: 'none' }} to={'/productos/:consal'}>
+              <Link className="navbar__btn" style={{ textDecoration: 'none' }} to={'/nosotros'}>
+                Nosotros
+              </Link>
+            </Button>
+          </li>
+          <li>
+            <Button disableRipple style={{ backgroundColor: 'transparent' }} variant="text" className="navbar__btn">
+              <Link className="navbar__btn" style={{ textDecoration: 'none' }} to={'/products/:category'}>
+                Productos
+              </Link>
+            </Button>
+          </li>
+          <li>
+            <Button disableRipple style={{ backgroundColor: 'transparent' }} variant="text" className="navbar__btn">
+              <Link className="navbar__btn" style={{ textDecoration: 'none' }} to={'/products/consal'}>
                 Con Sal
+              </Link>
+            </Button>
+          </li>
+          <li>
+            <Button disableRipple style={{ backgroundColor: 'transparent' }} variant="text" className="navbar__btn">
+              <Link className="navbar__btn" style={{ textDecoration: 'none' }} to={'/products/sinsal'}>
+                Sin Sal
               </Link>
             </Button>
           </li>

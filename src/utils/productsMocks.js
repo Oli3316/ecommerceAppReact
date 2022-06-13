@@ -4,7 +4,8 @@ const productos = [
     title: 'Queso',
     price: 200,
     image: 'Original.jpg',
-    stock: 40
+    stock: 40,
+    category: 'consal'
   },
   {
     id: 2,
@@ -12,14 +13,15 @@ const productos = [
     price: 200,
     image: 'chia.jpg',
     stock: 20,
-    category: 'Sin sal'
+    category: 'sinsal'
   },
   {
     id: 3,
     title: 'Jamon',
     price: 200,
     image: 'jamon.jpg',
-    stock: 12
+    stock: 12,
+    category: 'consal'
   },
   {
     id: 4,
@@ -27,17 +29,8 @@ const productos = [
     price: 200,
     image: 'Original.jpg',
     stock: 15,
-    category: 'Sin sal'
+    category: 'sinsal'
   }
 ];
-const producto = {
-  id: 4,
-  title: 'Original',
-  price: 200,
-  image: 'Original.jpg',
-  stock: 15,
-  category: 'Sin sal'
-};
 
 export default productos;
-export { producto };
