@@ -38,3 +38,4 @@ export const CartProvider = ({ children }) => {
 };
 
 export default CartProvider;
+export { CartContext };
