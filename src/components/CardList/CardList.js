@@ -3,16 +3,18 @@ import { Grid } from '@mui/material';
 import { useState, useEffect } from 'react';
 import productos from '../../utils/productsMocks';
 import { useParams } from 'react-router-dom';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import db from '../../utils/firebaseConfig';
 
 const CardList = ({ title }) => {
   const [products, setProducts] = useState([]);
 
   //llamo a la categoría
   const { category } = useParams();
-  console.log(category);
 
   const getProducts = () => {
     return new Promise((resolve, reject) => {
+      getProductos();
       if (category) {
         resolve(productos.filter((prod) => prod.category === category));
       } else {
@@ -27,7 +29,11 @@ const CardList = ({ title }) => {
     });
   }, [category]);
 
-  console.log(products);
+  const getProductos = async () => {
+    const productSnapshot = await getDocs(collection(db, 'productos'));
+    console.log('productSnapshot', productSnapshot);
+  };
+
   return (
     <>
       <h2>{title}</h2>

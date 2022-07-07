@@ -3,7 +3,13 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 const iconoCarrito = () => {
   return (
     <>
-      <Button disableRipple style={{ backgroundColor: 'transparent' }} variant="text" className="navbar__btn">
+      <Button
+        disableRipple
+        style={{ backgroundColor: 'transparent' }}
+        variant="text"
+        className="navbar__btn"
+        href="/micarrito"
+      >
         <ShoppingCartIcon className="iconos" />
       </Button>
     </>

@@ -7,7 +7,8 @@ import NotFound from './Pages/NotFound';
 import Contacto from './Pages/Contacto';
 // import ProductList from './Pages/ProductList';
 import CardList from './components/CardList/CardList';
-import { CartProvider } from './context/CartContext';
+import { CartContext } from './context/CartContext';
+import CartProvider from './context/CartContext';
 import Nosotros from './Pages/Nosotros';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/product/:id" element={<Detalle />} />
             <Route path="/products/:category" element={<CardList />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/micarrito" element={<CartProvider />} />
           </Routes>
         </BrowserRouter>
         {/* </ThemeProvider> */}
